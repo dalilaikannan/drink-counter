@@ -1,0 +1,31 @@
+
+# Dependency directories
+node_modules/
+
+# Build directories
+dist/
+build/
+
+# Log files
+*.log
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Lock files (optional)
+package-lock.json
+yarn.lock
+
+# Signing and certificates
+*.p12
+*.keystore
+*.cer
+node_modules/
