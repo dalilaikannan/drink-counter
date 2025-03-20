@@ -6,12 +6,11 @@ const CaffeineLog = () => {
   const [drinkLog, setDrinkLog] = useState([]);
 
   useEffect(() => {
-    // Retrieve drinkLog from localStorage
     const savedDrinkLog = JSON.parse(localStorage.getItem("drinkLog")) || [];
     
-    console.log("Loaded drinkLog from localStorage:", savedDrinkLog); // Debugging log
+    console.log("Loaded drinkLog from localStorage:", savedDrinkLog);
 
-    setDrinkLog(savedDrinkLog); // Set it to state
+    setDrinkLog(savedDrinkLog);
   }, []);
 
   const goBackToSelection = () => {

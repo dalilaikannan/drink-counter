@@ -14,7 +14,7 @@ const TemperatureSelection = () => {
 
   const selectTemp = (temp) => {
     if (!selectedDrink) {
-      alert("Select a drink first!"); // Could be replaced with UI message
+      alert("Select a drink first!"); 
       return;
     }
 
@@ -28,7 +28,6 @@ const TemperatureSelection = () => {
 
     localStorage.setItem("drinkLog", JSON.stringify(drinkLog));
 
-    // Optionally remove selected drink from localStorage
     localStorage.removeItem("selectedDrink");
 
     navigate("/caffeine-log");
