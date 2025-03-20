@@ -39,15 +39,11 @@ button {
   opacity: 0.8;
 }
 
-cupImage {
-    border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+#coffeeCup {
     margin-bottom: 5px;
     border-radius: 5px;
-}
-
-#coffeeCup {
     cursor: pointer;
-    height: auto;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }

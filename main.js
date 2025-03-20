@@ -1,12 +1,12 @@
-const { app, BrowserWindow, ipcMain, ipcRenderer } = require('electron');
+const { app, BrowserWindow} = require('electron');
 const path = require('path');
 
 let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 400,
-    height: 400,  
+    minWidth: 425,
+    minHeight: 400,  
     frame: false,
     webPreferences: {
       nodeIntegration: false,
@@ -15,8 +15,7 @@ function createWindow() {
   });
 
   win.webContents.openDevTools();
-
-  win.loadFile(path.join(__dirname, 'main.html'));
+  win.loadURL('http://localhost:3000');
 }
 
 app.whenReady().then(() => {
@@ -29,18 +28,10 @@ app.whenReady().then(() => {
   });
 });
 
+app.whenReady().then(createWindow);
+
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 });
-
-let hi = "hii"
-function press() {
-    console.log(hi)
-}
-
-ipcMain.on('button-pressed', () => {
-    press(); 
-});
-

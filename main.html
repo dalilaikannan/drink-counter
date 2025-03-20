@@ -1,22 +1,31 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <img id="startButton" src="assets/start-button.png" alt="Start Button" onclick="cupAwake()"/>
-        <img id="coffeeCup" src="assets/coffee-cup-sleepy.png" alt="coffee cup" />
-        <script>
-            const { ipcRenderer } = window.electron;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffeine Counter</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        .drink-button { margin: 10px; padding: 10px; font-size: 18px; }
+    </style>
+</head>
+<body>
+    <h1>Caffiene Counter</h1>
 
-            document.getElementById('startButton').addEventListener('click', function () {
-                ipcRenderer.send('button-pressed');
-                cupAwake();
-            });
+    <h2>Drink Selection</h2>
+    <!-- Drink Selection -->
+    <button class="drink-button" onclick="selectDrink('Tea')">Tea</button>
+    <button class="drink-button" onclick="selectDrink('Coffee')">Coffee</button>
+    <button class="drink-button" onclick="selectDrink('Boba')">Boba</button>
+    <button class="drink-button" onclick="selectDrink('Matcha')">Matcha</button>
 
-            function cupAwake() {
-                document.getElementById('coffeeCup').src = "assets/cup-awake-new.png"; 
-            }
+    <h2>Select Hot or Iced:</h2>
+    <button id="hot-btn" class="drink-button" onclick="selectTemp('Hot')">Hot</button>
+    <button id="iced-btn" class="drink-button" onclick="selectTemp('Iced')">Iced</button>
 
-          </script>
-    </body>
+    <h3>Caffeination Chart</h3>
+    <ul id="drink-log"></ul>
+
+    <script src="renderer.js"></script>
+</body>
 </html>
