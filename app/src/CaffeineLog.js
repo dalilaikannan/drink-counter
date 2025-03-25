@@ -14,7 +14,7 @@ const CaffeineLog = () => {
   }, []);
 
   const goBackToSelection = () => {
-    navigate("/drink-selection");
+    navigate("/drink-selection")
   };
 
   return (
