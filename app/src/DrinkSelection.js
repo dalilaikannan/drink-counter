@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./DrinkSelection.css"; // Import your regular CSS file
+import "./DrinkSelection.css"; 
 
 const DrinkSelection = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const DrinkSelection = () => {
         <button
           className="drink-button"
           style={{
-            backgroundImage: "url(/assets/tea.png)",
+            backgroundImage: "url(/assets/TEAPNG.png)",
             backgroundSize: "contain",
             backgroundPosition: "center",
           }}
@@ -29,7 +29,7 @@ const DrinkSelection = () => {
         <button
           className="drink-button"
           style={{
-            backgroundImage: "url(/assets/coffee.png)",
+            backgroundImage: "url(/assets/COFFEEPNG.png)",
             backgroundSize: "contain",
             backgroundPosition: "center",
           }}
@@ -39,7 +39,7 @@ const DrinkSelection = () => {
         <button
           className="drink-button"
           style={{
-            backgroundImage: "url(/assets/boba.png)",
+            backgroundImage: "url(/assets/BOBAPNG.png)",
             backgroundSize: "contain",
             backgroundPosition: "center",
           }}
@@ -49,7 +49,7 @@ const DrinkSelection = () => {
         <button
           className="drink-button"
           style={{
-            backgroundImage: "url(/assets/matcha.png)",
+            backgroundImage: "url(/assets/MATCHAPNG.png)",
             backgroundSize: "contain",
             backgroundPosition: "center",
           }}

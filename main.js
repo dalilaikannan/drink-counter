@@ -5,18 +5,17 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 425,
-    height: 400, 
-    minWidth: 425,
-    minHeight: 400,
+    width: 350,
+    height: 350, 
     frame: false,
     webPreferences: {
       nodeIntegration: false,
       preload: path.join(__dirname, "preload.js"),
     },
   });
-
   win.loadURL("http://localhost:3000");
+
+  win.webContents.openDevTools();
 }
 
 app.whenReady().then(() => {

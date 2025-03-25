@@ -11,7 +11,8 @@
     font-family:'Sacramento', cursive;
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 20px
   }
   
   .button-grid {
@@ -30,6 +31,7 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: transparent;
   }
   
   .selected-drink {
