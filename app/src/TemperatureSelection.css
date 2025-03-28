@@ -1,24 +1,23 @@
-
-  .title {
+.title {
     font-family:'Sacramento', cursive;
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-top: 5px
+    margin-top: 10px
   }
   
   .button-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    max-width: 200px; 
+    max-width: 250px; 
     margin: 0 auto;
     vertical-align: center;
   }
   
-  .drink-button {
-    width: 100px;
-    height: 100px;
+  .temp-button {
+    width: 125px;
+    height: 125px;
     border: none;
     cursor: pointer;
     background-size: contain;

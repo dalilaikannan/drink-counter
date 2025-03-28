@@ -13,7 +13,7 @@ const DrinkSelection = () => {
   };
 
   return (
-    <div className="drink-selection-container">
+    <div>
       <h2 className="title">Select a Drink</h2>
       <div className="button-grid">
         <button
@@ -56,10 +56,6 @@ const DrinkSelection = () => {
           onClick={() => handleSelectDrink("Matcha")}
         ></button>
       </div>
-
-      {selectedDrink && (
-        <p className="selected-drink">You selected: <strong>{selectedDrink}</strong></p>
-      )}
     </div>
   );
 };

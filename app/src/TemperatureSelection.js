@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./TemperatureSelection.css"; 
 
 const TemperatureSelection = () => {
   const [selectedDrink, setSelectedDrink] = useState(null);
@@ -35,22 +36,30 @@ const TemperatureSelection = () => {
 
   return (
     <div>
-      <h2>
-        {selectedDrink
-          ? `${selectedDrink} - Select Hot or Iced`
-          : "Please select a drink first to proceed"}
-      </h2>
-      {selectedDrink ? (
-        <>
-          <button onClick={() => selectTemp("Hot")}>Hot</button>
-          <button onClick={() => selectTemp("Iced")}>Iced</button>
-        </>
-      ) : (
-        <p>Please choose a drink before selecting hot or iced.</p>
-      )}
+      <h2 className="title">Iced or Hot?</h2>
+      <div className="button-grid">
+        <button
+          className="temp-button"
+          style={{
+            backgroundImage: "url(/assets/iced.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+          onClick={() => selectTemp("Iced")}
+        ></button>
+
+        <button
+          className="temp-button"
+          style={{
+            backgroundImage: "url(/assets/hot.png)",
+            backgroundSize: "contain",
+            backgroundPosition: "center",
+          }}
+          onClick={() => selectTemp("Hot")}
+        ></button>
+      </div>
     </div>
   );
 };
-
 
 export default TemperatureSelection;

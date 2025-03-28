@@ -5,8 +5,12 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 350,
-    height: 350, 
+    width: 360,
+    height: 360, 
+    minHeight: 360,
+    minWidth: 360,
+    maxHeight: 360,
+    maxWidth: 360,
     frame: false,
     webPreferences: {
       nodeIntegration: false,
@@ -14,6 +18,7 @@ function createWindow() {
     },
   });
   win.loadURL("http://localhost:3000");
+  win.setBackgroundColor('#56cc5b10');
 
   win.webContents.openDevTools();
 }
